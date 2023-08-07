@@ -1,0 +1,14 @@
+{% if latest_question_list %}
+    <ul>
+        {% for question in latest_question_list %}
+        <li>
+<!--            <a href="/polls/{{ question.id }}/">{{ question.question_text }}</a> NOT needed-->
+            <!--The code below references the url in the url.py file, by pointing to the detail url NAME in the path() function-->
+            <!--NOTE: Detail is defined in the views.py, in terms of what it actually does-->
+            <a htef="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
