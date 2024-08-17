@@ -41,4 +41,4 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
     #adding a string to the choice ID
     def __str__(self):
-        return self.choice_text
+        return slf.choice_text
